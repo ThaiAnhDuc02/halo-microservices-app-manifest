@@ -1,0 +1,1 @@
+# -halo-microservices-app-manifest
