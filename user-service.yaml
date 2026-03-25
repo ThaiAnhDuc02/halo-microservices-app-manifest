@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: anhduc8702/halo-microservices-app-user-service:latest
+          image: anhduc8702/halo-microservices-app-user-service:30
           ports:
             - containerPort: 3001
 ---
