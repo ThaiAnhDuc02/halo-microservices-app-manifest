@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: order-processor
-          image: anhduc8702/halo-microservices-app-order-processor:33
+          image: anhduc8702/halo-microservices-app-order-processor:34
           env:
             - name: KAFKA_BROKER
               value: "kafka:9092"
