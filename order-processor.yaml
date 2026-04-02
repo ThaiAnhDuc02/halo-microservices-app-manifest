@@ -17,7 +17,7 @@ spec:
           image: anhduc8702/halo-microservices-app-order-processor:32
           env:
             - name: KAFKA_BROKER
-              value: "kafka:9092"
+              value: "192.168.49.1:9092"
             - name: DB_PATH
               value: "/data/orders.db"
           volumeMounts:
