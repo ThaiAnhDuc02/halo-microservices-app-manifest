@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: anhduc8702/halo-microservices-app-api-gateway:32
+          image: anhduc8702/halo-microservices-app-api-gateway:34
           ports:
             - containerPort: 3000
 ---
