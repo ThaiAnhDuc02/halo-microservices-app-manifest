@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-processor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-processor
+  template:
+    metadata:
+      labels:
+        app: order-processor
+    spec:
+      containers:
+        - name: order-processor
+          image: anhduc8702/halo-microservices-app-order-processor:latest
+          env:
+            - name: KAFKA_BROKER
+              value: "kafka:9092"
+            - name: DB_PATH
+              value: "/data/orders.db"
+          volumeMounts:
+            - name: db-storage
+              mountPath: /data
+      volumes:
+        - name: db-storage
+          emptyDir: {}
