@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: anhduc8702/halo-microservices-app-frontend:36
+          image: anhduc8702/halo-microservices-app-frontend:37
           ports:
             - containerPort: 80
 ---
