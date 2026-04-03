@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: order-service
-          image: anhduc8702/halo-microservices-app-order-service:35
+          image: anhduc8702/halo-microservices-app-order-service:36
           ports:
             - containerPort: 3003
           env:
