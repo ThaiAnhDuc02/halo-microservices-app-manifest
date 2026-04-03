@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: data-collector
+spec:
+  ttlSecondsAfterFinished: 300
+  template:
+    metadata:
+      labels:
+        app: data-collector
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: data-collector
+          image: anhduc8702/halo-microservices-app-data-collector:latest
+          env:
+            - name: KAFKA_BROKER
+              value: "192.168.49.1:9092"

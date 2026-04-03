@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-processor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-processor
+  template:
+    metadata:
+      labels:
+        app: product-processor
+    spec:
+      containers:
+        - name: product-processor
+          image: anhduc8702/halo-microservices-app-product-processor:latest
+          env:
+            - name: KAFKA_BROKER
+              value: "192.168.49.1:9092"
+            - name: MONGO_URI
+              value: "mongodb://mongodb:27017"
