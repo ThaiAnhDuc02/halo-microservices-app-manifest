@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: anhduc8702/halo-microservices-app-user-service:35
+          image: anhduc8702/halo-microservices-app-user-service:37
           ports:
             - containerPort: 3001
           envFrom:
