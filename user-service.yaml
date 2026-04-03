@@ -17,6 +17,9 @@ spec:
           image: anhduc8702/halo-microservices-app-user-service:34
           ports:
             - containerPort: 3001
+          envFrom:
+            - secretRef:
+                name: mysql-credentials
 ---
 apiVersion: v1
 kind: Service
