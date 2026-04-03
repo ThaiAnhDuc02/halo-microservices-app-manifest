@@ -18,8 +18,8 @@ spec:
           env:
             - name: KAFKA_BROKER
               value: "192.168.49.1:9092"
-            - name: DB_PATH
-              value: "/data/orders.db"
+            # - name: DB_PATH
+            #  value: "/data/orders.db"
           envFrom:
             - secretRef:
                 name: mysql-credentials
