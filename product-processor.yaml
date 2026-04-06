@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: product-processor
-          image: anhduc8702/halo-microservices-app-product-processor:latest
+          image: anhduc8702/halo-microservices-app-product-processor:45
           env:
             - name: KAFKA_BROKER
               value: "192.168.49.1:9092"

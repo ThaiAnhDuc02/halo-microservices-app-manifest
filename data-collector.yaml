@@ -12,7 +12,7 @@ spec:
       restartPolicy: OnFailure
       containers:
         - name: data-collector
-          image: anhduc8702/halo-microservices-app-data-collector:latest
+          image: anhduc8702/halo-microservices-app-data-collector:45
           env:
             - name: KAFKA_BROKER
               value: "192.168.49.1:9092"
