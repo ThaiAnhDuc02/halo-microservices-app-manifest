@@ -1,18 +1,22 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: data-collector
 spec:
-  ttlSecondsAfterFinished: 300
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-collector
   template:
     metadata:
       labels:
         app: data-collector
     spec:
-      restartPolicy: OnFailure
       containers:
         - name: data-collector
           image: anhduc8702/halo-microservices-app-data-collector:latest
           env:
             - name: KAFKA_BROKER
               value: "192.168.49.1:9092"
+            - name: INTERVAL_MS
+              value: "300000"  # 5 phút, có thể thay đổi
