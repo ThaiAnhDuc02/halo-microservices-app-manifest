@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: anhduc8702/halo-microservices-app-product-service:45
+          image: anhduc8702/halo-microservices-app-product-service:36
           ports:
             - containerPort: 3002
           env:
             - name: MONGO_URI
-              value: "mongodb://mongodb:27017"
+              value: "mongodb://192.168.49.1:27017"
           envFrom:
             - secretRef:
                 name: mysql-credentials

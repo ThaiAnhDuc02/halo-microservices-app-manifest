@@ -19,4 +19,4 @@ spec:
             - name: KAFKA_BROKER
               value: "192.168.49.1:9092"
             - name: MONGO_URI
-              value: "mongodb://mongodb:27017"
+              value: "mongodb://192.168.49.1:27017"
