@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: data-collector
-          image: anhduc8702/halo-microservices-app-data-collector:45
+          image: anhduc8702/halo-microservices-app-data-collector:46
           env:
             - name: KAFKA_BROKER
               value: "192.168.49.1:9092"
